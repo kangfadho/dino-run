@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://brbr8lx2jv74a"]
+
+[ext_resource type="PackedScene" uid="uid://bjdbwtiwdyojb" path="res://Scene/dino.tscn" id="1_5exfe"]
+[ext_resource type="Script" uid="uid://dw148oop1sw0j" path="res://Script/level_1.gd" id="1_poeaa"]
+[ext_resource type="PackedScene" uid="uid://bghk0jusl48qb" path="res://Scene/ground.tscn" id="2_6544n"]
+[ext_resource type="PackedScene" uid="uid://hcjb6bbku8ux" path="res://Scene/bg.tscn" id="3_poeaa"]
+[ext_resource type="FontFile" uid="uid://clv2q5suk5swg" path="res://assets/fonts/retro.ttf" id="4_6544n"]
+
+[node name="Level1" type="Node" unique_id=1755735558]
+script = ExtResource("1_poeaa")
+
+[node name="Dino" parent="." unique_id=1878614265 instance=ExtResource("1_5exfe")]
+position = Vector2(130, 479)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2539267]
+position = Vector2(576, 324)
+
+[node name="Ground" parent="." unique_id=2103574273 instance=ExtResource("2_6544n")]
+
+[node name="Bg" parent="." unique_id=1244787091 instance=ExtResource("3_poeaa")]
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1913349695]
+
+[node name="Start_Label" type="Label" parent="HUD" unique_id=1382133891]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_6544n")
+theme_override_font_sizes/font_size = 70
+text = "Tekan Untuk Mulai"
+horizontal_alignment = 1
+vertical_alignment = 1
